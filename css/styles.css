@@ -1,0 +1,119 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    background-color: beige;
+}
+
+.home {
+    background-image: url(../images/banner.jpg);
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 360px;
+}
+
+.home-banner h1 {
+    color: white;
+    display: block;
+}
+
+.topBar {
+    border-bottom: 10px solid #FFF266;
+    margin-bottom: 15px;
+}
+
+.green-bck {
+    background-color: #00A75C;
+}
+
+.highlight {
+    color: #00A75C;
+  }
+
+/* Home Page */
+
+.controlPanel {
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.leftPanel{
+    float: left;
+    width: 50%;
+}
+
+.rightPanel{
+    float: right;
+    width: 50%;
+}
+
+#addTag li {
+    width: 255px;
+}
+
+#tType label {
+    margin-right: 20px;
+}
+
+/* Pagination */
+.paginationBox {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination li {
+    margin-right: 15px;
+}
+
+/* Sidebar Page */
+
+.sidebar img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.sidebar h5 {
+    display: block;
+    background-color: #8F7BB9;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.borders {
+    border:1px solid gray;
+}
+
+.border-left {
+    border-left:1px solid gray;
+}
+
+.border-right {
+    border-right:1px solid gray;
+}
+
+pre {
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+
+/* FOOTER */
+footer {
+    border-top: 10px solid #FFF266;
+}
+
+footer a {
+    color: #FFF266;
+}
+
+/*** Mobile ***/
+
