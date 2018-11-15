@@ -5,9 +5,9 @@
     // username and password sent from form 
       
     $myUserName = mysqli_real_escape_string($conn,$_POST['username']);
-    $myPassword = mysqli_real_escape_string($conn,$_POST['password']); 
+    $myPassword = mysqli_real_escape_string($conn,$_POST['password']);
       
-    $sql = "SELECT id FROM users WHERE password = '$myPassword' AND username = '$myUserName'";
+    $sql = "SELECT id FROM users WHERE username = '$myUserName'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $active = $row['active'];
@@ -16,11 +16,11 @@
       
     // If result matched $myusername and $mypassword, table row must be 1 row
     
-    if($count == 1) {
-      $cookie_name = username;
-      $cookie_value = $myUserName;
-      setcookie($cookie_name, $cookie_value);
-      header( "Location: home.php" );
+    if(($count == 1) && (password_verify($myPassword, '$2y$10$RQTlzRu2i/VHukoFh7LUj.lL2TovFZV6FUXjRoV9f.GEUwPJQEPcS'))) {
+        $cookie_name = username;
+        $cookie_value = $myUserName;
+        setcookie($cookie_name, $cookie_value);
+        header( "Location: home.php" );
     } else {
       $error = "Your Login Name or Password is invalid";
       echo $error;
